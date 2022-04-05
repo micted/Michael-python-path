@@ -174,4 +174,30 @@ if __name__ == '__main__':
     tup = tuple(integer_list)
     print(hash(tup))
    
-      
+
+#swapecase
+
+def swap_case(s):
+    li = []
+    stri = ""
+    for i in s:
+        #print(i)
+        if i.islower():
+            i = i.upper()
+            li.append(i)
+            
+        elif i.isupper():
+            i = i.lower()
+            li.append(i)
+        else:
+            li.append(i)
+            
+    return stri.join(li)
+     
+    
+    
+
+if __name__ == '__main__':
+    s = raw_input()
+    result = swap_case(s)
+    print result
