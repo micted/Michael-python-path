@@ -201,3 +201,73 @@ if __name__ == '__main__':
     s = raw_input()
     result = swap_case(s)
     print result
+
+#string split and join
+
+def split_and_join(line):
+    
+    line = line.split(" ")
+    line = "-".join(line)
+    
+    return line
+    
+    
+    # write your code here
+
+if __name__ == '__main__':
+    line = raw_input()
+    result = split_and_join(line)
+    print result
+
+
+#what is your name?
+# Michael
+
+def print_full_name(first, last):
+    # Write your code here
+    print("Hello " + str(first) + " " + str(last) + "!" + " " + "You just delved into python.") 
+
+if __name__ == '__main__':
+    first_name = raw_input()
+    last_name = raw_input()
+    print_full_name(first_name, last_name)
+
+
+#mutations 
+
+def mutate_string(string, position, character):
+    
+    string  = string[:position] + character + string[position+1:]
+    return string
+
+if __name__ == '__main__':
+    s = raw_input()
+    i, c = raw_input().split()
+    s_new = mutate_string(s, int(i), c)
+    print s_new
+
+
+# find a string 
+
+def count_substring(string, sub_string):
+    count = 0
+    
+    for i in range(len(string)):
+        if string[i:].startswith(sub_string):
+            # result = string.find(sub_string)
+            count +=1
+    return count
+    #for i in range(len(string)):
+    print(c) 
+
+#symmetric
+
+m=int(input())
+a=set(map(int,input().split()))
+n=int(input())
+b=set(map(int,input().split()))
+for i in sorted(a.symmetric_difference(b)):
+    print(i)
+#set add
+
+print(len(set([str(input()) for _ in range(int(input()))])))
