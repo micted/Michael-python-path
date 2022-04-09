@@ -271,3 +271,21 @@ for i in sorted(a.symmetric_difference(b)):
 #set add
 
 print(len(set([str(input()) for _ in range(int(input()))])))
+
+#discard,remove,pop
+
+choice=input().split()
+if choice[0]=="pop" :
+    s.pop()
+elif choice[0]=="remove" :
+    s.remove(int(choice[1]))
+elif choice[0]=="discard" :
+    s.discard(int(choice[1]))
+
+    #or
+n = int(input())
+s = set(map(int, input().split())) 
+for i in range(int(input())):
+    eval('s.{0}({1})'.format(*input().split()+['']))
+
+print(sum(s))
