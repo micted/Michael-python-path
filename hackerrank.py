@@ -302,13 +302,68 @@ print(len(set1|set2))
 
 # no idea
 
-# Enter your code here. Read input from STDIN. Print output to STDOUT
 
 n, m = input().split()
 
 ar = input().split()
+import math
 
+a = int(input())
+b = int(input())
+m = int(input())
+
+print(pow(a,b))
+print(pow(a,b)% m)
 A = set(input().split())
 B = set(input().split())
 c= sum([(i in A) - (i in B) for i in ar])
 print(c)
+
+#mod divmod
+
+from __future__ import division
+
+a = int(input())
+b = int(input())
+
+print(a//b)
+print(a%b)
+print(divmod(a,b))
+
+# power mod power
+
+import math
+
+a = int(input())
+b = int(input())
+m = int(input())
+
+print(pow(a,b))
+print(pow(a,b)% m)
+
+
+# find angle mbc
+
+import math
+
+ab = int(input())
+bc = int(input())
+
+# ac = math.sqrt(ab**2 + bc**2)
+# M = ac/2
+# bm = math.sqrt(bc**2 - M**2)
+# deg = bm/bc
+# degb = 3.14159 - 1.5708 - deg
+# print(round(math.degrees(degb)))
+
+print(round(int(math.degrees((math.atan2(bc,ab))))))
+
+
+# product
+
+from itertools import product
+A = list(map(int,input().split(' ')))
+B = list(map(int,input().split(' ')))
+
+
+print(*product(A,B))
