@@ -289,3 +289,26 @@ for i in range(int(input())):
     eval('s.{0}({1})'.format(*input().split()+['']))
 
 print(sum(s))
+
+# set union
+
+_,set1 = input(), set(input().split())
+_,set2 = input(), set(input().split())
+
+
+
+print(len(set1|set2))
+
+
+# no idea
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+n, m = input().split()
+
+ar = input().split()
+
+A = set(input().split())
+B = set(input().split())
+c= sum([(i in A) - (i in B) for i in ar])
+print(c)
