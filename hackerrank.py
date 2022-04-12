@@ -367,3 +367,11 @@ B = list(map(int,input().split(' ')))
 
 
 print(*product(A,B))
+
+# PERMUTATION
+from itertools import permutations
+n = input().split(' ')
+#print(n[0])
+per = sorted(list(permutations(n[0],int(n[1]))))
+
+[print("".join(i)) for i in per]
