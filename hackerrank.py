@@ -375,3 +375,64 @@ n = input().split(' ')
 per = sorted(list(permutations(n[0],int(n[1]))))
 
 [print("".join(i)) for i in per]
+
+
+#combination
+
+from itertools import combinations
+n = input().split(' ')
+#print(n[0])
+li = list(n[0])
+n1 = int(n[1])
+per = sorted(list(combinations(li,int(n[1]))))
+#print(per)
+for i in range(1,n1+1):
+    
+    for j in combinations(sorted(li),i):
+        print("".join(j))
+   # [print("".join(j)) for j in per]
+
+
+#COMPRESS STRING --- GROUPBY()
+
+from itertools import groupby
+
+for k,c in groupby(input()):
+    print((len(list(c)),int(k)))
+
+
+#ITERABLES AND ITERATORS
+
+from itertools import combinations;
+n = int(input().strip())
+m = input().strip().split()
+z = int(input().strip())
+
+ag = 0
+all=0
+for i in combinations(m,z):
+    all+=1
+    if 'a' in i:
+        ag=ag+1
+        
+print(ag/all)
+
+
+# from itertools import combinations
+# import itertools
+
+# n= int(input())
+# m = input().split()
+# z =  input()
+
+# li = []
+# for i, el in enumerate(m):
+#     if el == "a":
+#         li.append(i+1)
+  
+# c = tuple(combinations(range(1,n+1), int(z)))
+# fc = [a_tuple[0] for a_tuple in c]
+# result = [i for i in fc if i in li]
+# r = len(result)
+# print(r/len(c))
+
