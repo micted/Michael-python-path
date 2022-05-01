@@ -436,3 +436,25 @@ print(ag/all)
 # r = len(result)
 # print(r/len(c))
 
+
+
+# COUNTER
+
+from collections import Counter
+
+m = input()
+sizec = Counter(map(int,input().split()))
+c= int(input())
+
+income = 0
+
+for i in range(c):
+    c1,c2 = map(int,input().split())    
+
+    if sizec[c1]:
+        income += c2
+        sizec[c1] -=1
+        
+        
+print(income)
+
