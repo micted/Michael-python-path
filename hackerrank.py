@@ -488,3 +488,36 @@ if __name__ == '__main__':
         print(*el)
 
 
+# DEFAULT DICT TUTORIAL
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from collections import defaultdict
+n = input().split()
+
+
+
+# create a list and append group A values with default key mechanism
+# the key in the dic is the letter and value is the position
+# (key,[value])
+#
+d= defaultdict(list)
+list1 = []
+
+for i in range(0,int(n[0])):
+    
+    d[input()].append(i+1)
+    
+    
+    
+for i in range(int(n[0]), int(n[0])+int(n[1])):
+    list1.append(input())
+    
+# print(list1)
+for i in list1:
+    if i in d:
+        print( " ".join(map(str,d[i])))
+        
+    else:
+        print(-1)
+        
+
