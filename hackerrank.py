@@ -521,3 +521,57 @@ for i in list1:
         print(-1)
         
 
+#traingle quest 
+
+for i in range(1,int(input())+1):
+    print(((10**i-1)//9)**2)
+
+
+# NAMED TUPLES
+
+from collections import namedtuple
+
+
+m = input()
+n = str(input())
+
+col = namedtuple("col",n)
+s = 0
+for i in range(int(m)):
+    z = input().split() 
+    c = col(*z)
+    s += int(c.MARKS)
+print(s/int(m))
+
+
+# ORDERED DIC
+
+# items with price tag 
+# return item name
+
+# read each item then multiply it with the total occurance
+from collections import OrderedDict
+
+m = int(input())
+
+o_dic = OrderedDict()
+
+for i in range(m):
+    
+       
+   
+    
+    name = input().split()
+    k = ' '.join(map(str,([x for x in name if not x.isdigit()])))
+    
+    v = int([x for x in name if x.isdigit()][0])
+    
+    if k in o_dic:
+        v += o_dic[k]
+        o_dic[k] = v
+    o_dic[k] = v
+
+
+for k,v in o_dic.items():
+    print(k, v)
+
