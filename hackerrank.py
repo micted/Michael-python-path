@@ -590,3 +590,38 @@ for i in range(int(input())):
 print(*d)
     
  
+
+#EXCEPTION
+
+
+m = input()
+
+
+for i in range(int(m)):
+    try:
+        a,b = map(int,input().split()) 
+        division_result = a // b
+        print(division_result)
+    except ZeroDivisionError as e:
+        print("Error Code:", e)
+    except ValueError as e:
+        print("Error Code:", e)
+
+
+
+#REGEX
+
+import re
+
+t = int(input())
+
+for i in range(t):
+    
+    s = input()
+    try:
+        re.compile(s)
+        print(True)
+        
+    except:
+        print(False)
+    
