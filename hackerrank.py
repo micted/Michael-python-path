@@ -148,10 +148,7 @@ if __name__ == '__main__':
 if __name__ == '__main__':
     N = int(raw_input())
  
-    
-    
-    
-    
+       
     #command = li
   
     l = []
@@ -575,3 +572,21 @@ for i in range(m):
 for k,v in o_dic.items():
     print(k, v)
 
+
+
+
+# DEQUE
+
+from collections import deque
+
+d = deque()
+
+
+for i in range(int(input())):
+    method,*n = input().split()
+    
+    getattr(d,method)(*n)
+    
+print(*d)
+    
+ 
