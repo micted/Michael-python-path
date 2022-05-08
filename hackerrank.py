@@ -625,3 +625,71 @@ for i in range(t):
     except:
         print(False)
     
+
+
+import math
+
+# Ax = 0, Bx = 1, Cx = 0, Dx = 1
+
+# Ay = 4, By = 7, Cy =5 , Dy = 7
+
+# Az = 5, Bz = 6, cz = 9, Dz = 2
+
+
+
+class Points(object):
+    def __init__(self, x, y, z):
+        
+        self.x = x
+        self.y = y
+        self.z = z
+
+    def __sub__(self, no):
+        
+        return Points((self.x-no.x),(self.y-no.y),(self.z-no.z))
+
+    def dot(self, no):
+        
+       return  self.x * no.x + self.y*no.y + self.z*no.z
+
+    def cross(self, no):
+        
+         return Points((self.y*no.z-self.z*no.y),(self.z*no.x-self.x*no.z),(self.x*no.y-self.y*no.x))        
+        
+    def absolute(self):
+        return pow((self.x ** 2 + self.y ** 2 + self.z ** 2), 0.5)
+
+
+# ZIPPED
+
+m,n = map(int,input().split())
+
+li = []
+
+for i in range(n):
+    
+    li.append(map(float,input().split()))
+    
+
+for i in zip(*li):
+    
+    print(sum(i)/len(i))
+
+
+# ANY OR ALL
+
+m = int(input())
+
+n = input().split()
+
+def palandimor(x):
+    if x[::-1] == x:
+        return True
+    
+    else:
+        return False
+
+
+
+
+print(all([int(i) > 0 for i in n]) and any([palandimor(el) for el in n]))
